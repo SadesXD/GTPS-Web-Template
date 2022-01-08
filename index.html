@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+  </head>
+  <body class="overflow-x-hidden bg-whiteCustom">
+    <!-- header -->
+    <section>
+      <header class="flex justify-between items-center mx-10 my-7">
+        <a class="server_name font-bold tracking-wide text-xl dark:text-gray-200 uppercase" href="#"></a>
+        <ul id="navbar" class="navbar hidden md:flex dark:bg-darkCard dark:md:bg-transparent">
+          <li class="NavbarLi"><a onclick="mobileClick()" class="NavbarHrefStyle" href="#">Home</a></li>
+          <li class="NavbarLi"><a onclick="mobileClick()" class="NavbarHrefStyle" href="#about">About</a></li>
+          <li class="NavbarLi"><a onclick="mobileClick()" class="NavbarHrefStyle" href="#features">Features</a></li>
+          <li class="NavbarLi"><a onclick="mobileClick()" class="NavbarHrefStyle" href="#galery">Galery</a></li>
+          <div class="circle-blur top-0 -left-7 bg-blue-200/70 md:hidden"></div>
+          <div class="circle-blur bottom-5 -right-8 bg-pink-200/80 md:hidden"></div>
+          <i id="dark" onclick="darkModeClick()" class="darkIcon far fa-moon"></i>
+        </ul>
+        <i id="bar" onclick="mobileClick()" class="fas fa-bars iconStyle z-20 md:-top-3/4 dark:text-gray-200 dark:hover:text-blue-300"></i>
+      </header>
+        <div class="circle-blur top-0 -left-2 lg:-left-[10em] bg-pinkBlur/20 md:-left-[7em]"></div>
+    </section>
+
+    <!-- Jumbotron -->
+    <section id="home" class="relative mx-5">
+      <div class="mt-[7em] space-y-5 md:flex md:justify-between md:items-center md:flex-row-reverse md:mx-5">
+        <div class="md:space-y-5">
+          <img src="" alt="img" class="server_images w-[90%] mx-auto rounded-md md:mx-0 lg:w-[70%]">
+          <img src="" alt="img" class="server_images hidden rounded-md w-[90%] md:block md:ml-[18%] lg:w-[70%]">
+        </div>
+        <div class="space-y-2">
+          <h1 class="server_name capitalize text-xl font-bold tracking-wide dark:text-gray-200"></h1>
+          <p id="server_description" class="indent-5 md:w-[95%] lg:w-[80%] text-justify md:text-left dark:text-gray-200"></p>
+        </div>
+      </div>
+      <div class="circle-blur top-[50%] -right-[20%] bg-purpleBlur md:top-20"></div>
+      <i class="fas fa-angle-double-down text-gray-700 mx-[50%] dark:text-gray-200 mt-[10%] text-[2em] animate-bounce cursor-pointer" onclick="scrollIntoView()" ></i>
+    </section>
+
+    <!-- About us -->
+    <section id="about" class="mt-[10em] md:mx-5 relative">
+      <div class="flex flex-col items-center md:flex-row-reverse mx-5">
+        <div class="space-y-5 py-5 md:mr-5 lg:mr-20">
+          <div class="card relative right-5">
+            <img src="image/defaultProfile.png" alt="profile" class="cardImage md:w-[30%]">
+            <div>
+              <h1 class="creatorName font-bold dark:text-gray-200"></h1>
+              <p class="creatorRole dark:text-gray-200"></p>
+            </div>
+          </div>
+          <div class="card relative left-5">
+            <img src="image/defaultProfile.png" alt="profile" class="cardImage md:w-[30%]">
+            <div>
+              <h1 class="creatorName font-bold dark:text-gray-200"></h1>
+              <p class="creatorRole dark:text-gray-200"></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class=" mt-5 space-y-2 ">
+          <h1 class="capitalize text-xl font-bold tracking-wide dark:text-gray-200">About Us</h1>
+          <p id="aboutServer" class="indent-5 md:w-[95%] lg:w-[80%] text-justify md:text-left dark:text-gray-200"></p>
+          <div class="flex justify-center md:justify-start space-x-5 mx-5 my-3">
+            <div class="aboutUsButton">
+              <a id="discord_server_link" href="#" class="dark:text-gray-200">
+                join discord
+              </a>
+            </div>
+            <div class="aboutUsButton dark:text-gray-200" onclick="modalX()">
+              how to play
+            </div>
+          </div>
+        </div>
+        <div class="circle-blur bg-orangeBlur/90 top-0 -left-[10em]"></div>
+        <div class="circle-blur bg-blueBlur/50 -bottom-[10em] md:-bottom-[5em] right-0"></div>
+      </div>
+    </section>
+    
+    <!-- Modal How to play /hidden -->
+    <section id="modalMain" class="hidden mt-[10%] md:mt-[3%]">
+      <div id="modal" class="relative m-5 shadow-base rounded-md p-5 dark:bg-darkCard dark:shadow-baseDark md:mx-[20%]"> 
+        <div class="modalX" onclick="modalX()">&times;</div>
+        <h2 class="text-center mb-5 font-bold text-xl dark:text-gray-200">Choose your device</h2>
+        <div class="mx-[20%] space-y-3">
+          <p class="deviceCard" onclick="tutorClick('android')">
+            <i class="fab fa-android text-2xl mx-2 text-lime-500"></i>
+            Android
+          </p>
+          <p class="deviceCard" onclick="tutorClick('pc')">
+            <i class="fas fa-desktop text-2xl mx-2 text-gray-600 dark:text-gray-400"></i>
+            PC
+          </p>
+          <p class="deviceCard" onclick="tutorClick('ios')">
+            <i class="fab fa-apple text-2xl mx-2 text-gray-400 dark:text-gray-100"></i>
+            IOS
+          </p>
+        </div>
+      </div>
+    </section>
+
+      <!-- Partners part -->
+      <section id="partners" class="mt-[10%] md:mt-[5%]">
+        <div class="text-center">
+          <h1 class="font-bold text-xl text-gray-700 dark:text-gray-400">Our Partners</h1>
+          <div class="divide-x-2 flex justify-center mt-5">
+            <P class="partners px-5 text-sm md:px-12 dark:text-gray-200">LOREM</P>
+            <P class="partners px-5 text-sm md:px-12 dark:text-gray-200">LOREM</P>
+            <P class="partners px-5 text-sm md:px-12 dark:text-gray-200">LOREM</P>
+            <P class="partners px-5 text-sm md:px-12 dark:text-gray-200">LOREM</P>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="my-[10em] relative">
+        <h1 class="text-center text-xl font-bold dark:text-gray-200">Features</h1>
+        <p class="text-center my-3 mx-5 dark:text-gray-200">There are amazing features that we have, Let's find out</p>
+        <div class="my-7 space-y-7 md:grid md:mx-5 lg:mx-16 md:space-y-0 md:gap-7 md:grid-cols-3"> 
+          <div class="fiturCard">
+            <h1 class="font-bold text-lg dark:text-gray-200">No <span class="text-blue-400">1.</span></h1>
+            <p class="featuresConfig text-sm text-justify dark:text-gray-200"></p>
+          </div>
+          <div class="fiturCard">
+            <h1 class="font-bold text-lg dark:text-gray-200">No <span class="text-blue-400">2.</span></h1>
+            <p class="featuresConfig text-sm text-justify dark:text-gray-200"></p>
+          </div>
+          <div class="fiturCard">
+            <h1 class="font-bold text-lg dark:text-gray-200">No <span class="text-blue-400">3.</span></h1>
+            <p class="featuresConfig text-sm text-justify dark:text-gray-200"></p>
+          </div>
+          <div class="fiturCard">
+            <h1 class="font-bold text-lg dark:text-gray-200">No <span class="text-blue-400">4.</span></h1>
+            <p class="featuresConfig text-sm text-justify dark:text-gray-200"></p>
+          </div>
+          <div class="fiturCard">
+            <h1 class="font-bold text-lg dark:text-gray-200">No <span class="text-blue-400">5.</span></h1>
+            <p class="featuresConfig text-sm text-justify dark:text-gray-200"></p>
+          </div>
+          <div class="fiturCard">
+            <h1 class="font-bold text-lg dark:text-gray-200">No <span class="text-blue-400">6.</span></h1>
+            <p class="featuresConfig text-sm text-justify dark:text-gray-200"></p>
+          </div>
+        </div>
+        <div class="circle-blur bg-pinkBlur/20 top-[3em] -left-[5em]"></div>
+        <div class="circle-blur bg-orangeBlur/20 -bottom-[2em] -right-[2em] md:-right-[1em] md:bg-orangeBlur/30"></div>
+      </section>
+
+      <!-- Galery -->
+      <section id="galery" class="my-[10em] relative">
+        <h1 class="text-center text-xl font-bold dark:text-gray-200">Galery</h1>
+        <p class="text-center my-3 mx-5 dark:text-gray-200">These are some image activites that we are doing</p>
+        <div class="flex flex-col items-center justify-center mx-10 my-5 space-y-5 md:flex-row md:space-y-0 md:mx-20 md:space-x-3 md:mt-10">
+          <img src="" alt="img" class="galeryConfig w-full rounded-md aspect-video object-cover md:w-[25%]">
+          <img src="" alt="img" class="galeryConfig w-full rounded-md aspect-video object-cover md:w-[25%]">
+          <img src="" alt="img" class="galeryConfig w-full rounded-md aspect-video object-cover md:w-[25%]">
+          <img src="" alt="img" class="galeryConfig w-full rounded-md aspect-video object-cover md:w-[25%]">
+        </div>
+        <div class="circle-blur bg-purpleBlur/40 -bottom-[10em] left-0 md:-bottom-5"></div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center py-5 border-t mx-10 border-t-gray-300/50 dark:text-gray-200">
+        Made with love using <span class="text-blue-400 cursor-pointer hover:text-blue-500 transition duration-300"><a href="#">GTPS Website Template</a></span>
+      </footer>
+
+      <script src="config.js"></script>
+      <script src="src/tutorial.js"></script>
+      <script src="src/script.js"></script>
+  </body>
+</html>
