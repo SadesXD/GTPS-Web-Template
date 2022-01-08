@@ -17,5 +17,5 @@ GTPS Website template for your GTPS Server
 
 Soon
 
-## Demo: 
+## Website Demo
 https://sadesxd.github.io/GTPS-Web-Template/
