@@ -1404,6 +1404,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 5rem;
   }
 
+  .md\:mx-1{
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .md\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .md\:ml-\[18\%\]{
     margin-left: 18%;
   }
