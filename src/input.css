@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 * {
+  padding: 0;
+  margin: 0;
   font-family: "Mulish", sans-serif;
 }
 
@@ -11,81 +13,76 @@
   width: 15px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #71dfe7;
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #6bcfd6;
 }
 
-@layer components {
-  .navbar {
-    @apply fixed inset-0 text-center pt-[30%] bg-white/50 backdrop-blur-sm z-10 md:items-center md:bg-transparent md:backdrop-blur-none md:space-x-5 md:static md:pt-0 md:text-xl;
-  }
 
-  .card {
-    @apply shadow-base rounded-md p-2 flex items-center m-2 w-[18em] space-x-3 dark:bg-darkCard dark:shadow-baseDark;
-  }
-
-  .cardImage {
-    @apply w-[15%] rounded-md;
-  }
-
-  .fiturCard {
-    @apply mx-auto w-[80%] md:w-full p-5 rounded-md shadow-base bg-white z-[2] relative dark:bg-darkCard dark:shadow-baseDark;
-  }
-
-  .NavbarLi {
-    @apply my-3 text-xl md:text-lg font-medium dark:text-gray-200;
-  }
-
-  .NavbarHrefStyle {
-    @apply transition duration-300 hover:text-blue-300;
-  }
-
-  .deviceCard {
-    @apply shadow-base rounded-md p-3 cursor-pointer hover:bg-gray-200/30 dark:bg-darkCard dark:hover:bg-darkCardHover dark:shadow-baseDark dark:text-white;
-  }
-
-  .modalTitle {
-    @apply font-bold mb-3 text-xl text-center dark:text-gray-200 capitalize;
-  }
-
-  .modalP {
-    @apply dark:text-gray-200 py-3;
-  }
-
-  .modalSpan {
-    @apply text-blue-400 font-bold;
-  }
-
-  .modalX {
-    @apply px-3.5 py-1 rounded-md absolute top-3 left-4 dark:text-gray-200 text-2xl cursor-pointer shadow-base dark:shadow-baseDark hover:bg-gray-200/30 dark:hover:bg-darkCardHover transition duration-300;
-  }
+.navbar {
+  @apply fixed inset-0 text-center pt-[30%] bg-white/50 backdrop-blur-sm z-10 md:items-center md:bg-transparent md:backdrop-blur-none md:space-x-5 md:static md:pt-0 md:text-xl;
 }
 
-@layer utilities {
-  .iconStyle {
-    @apply absolute top-8 right-5 mx-5 text-xl cursor-pointer transition duration-300 hover:text-blue-300;
-  }
+.card {
+  @apply shadow-base rounded-md p-2 flex items-center m-2 w-[18em] space-x-3 dark:bg-darkCard dark:shadow-baseDark;
+}
 
-  .circle-blur {
-    @apply w-2/6 h-1/4 rounded-full absolute blur-[7em];
-  }
+.cardImage {
+  @apply w-[15%] rounded-md;
+}
 
-  .darkIcon {
-    @apply z-[30] text-xl dark:text-amber-400 cursor-pointer transition duration-300 hover:text-blue-300 absolute top-8 right-[4em] md:static dark:hover:text-blue-300;
-  }
+.fiturCard {
+  @apply mx-auto w-[80%] md:w-full p-5 rounded-md shadow-base bg-white z-[2] relative dark:bg-darkCard dark:shadow-baseDark;
+}
 
-  .aboutUsButton {
-    @apply capitalize px-3 py-2 rounded-md shadow-base dark:shadow-baseDark cursor-pointer  hover:bg-gray-100/80 transition duration-300 dark:bg-darkCard dark:hover:bg-darkCardHover;
-  }
+.NavbarLi {
+  @apply my-3 text-xl md:text-lg font-medium dark:text-gray-200;
+}
 
-  .modalAStyle {
-    @apply text-cyan-500 hover:text-blue-500 transition duration-300;
-  }
+.NavbarHrefStyle {
+  @apply transition duration-300 hover:text-blue-300;
+}
+
+.deviceCard {
+  @apply shadow-base rounded-md p-3 cursor-pointer hover:bg-gray-200/30 dark:bg-darkCard dark:hover:bg-darkCardHover dark:shadow-baseDark dark:text-white;
+}
+
+.modalTitle {
+  @apply font-bold mb-3 text-xl text-center dark:text-gray-200 capitalize;
+}
+
+.modalP {
+  @apply dark:text-gray-200 py-3;
+}
+
+.modalSpan {
+  @apply text-blue-400 font-bold;
+}
+
+.modalX {
+  @apply px-3.5 py-1 rounded-md absolute top-3 left-4 dark:text-gray-200 text-2xl cursor-pointer shadow-base dark:shadow-baseDark hover:bg-gray-200/30 dark:hover:bg-darkCardHover transition duration-300;
+}
+
+.iconStyle {
+  @apply absolute top-8 right-5 mx-5 text-xl cursor-pointer transition duration-300 hover:text-blue-300;
+}
+
+.circle-blur {
+  @apply w-2/6 h-1/4 rounded-full absolute blur-[7em];
+}
+
+.darkIcon {
+  @apply z-[30] text-xl dark:text-amber-400 cursor-pointer transition duration-300 hover:text-blue-300 absolute top-8 right-[4em] md:static dark:hover:text-blue-300;
+}
+
+.aboutUsButton {
+  @apply capitalize px-3 py-2 rounded-md shadow-base dark:shadow-baseDark cursor-pointer  hover:bg-gray-100/80 transition duration-300 dark:bg-darkCard dark:hover:bg-darkCardHover;
+}
+
+.modalAStyle {
+  @apply text-cyan-500 hover:text-blue-500 transition duration-300;
 }
