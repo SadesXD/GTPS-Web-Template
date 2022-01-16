@@ -33,7 +33,7 @@ function darkModeLoad() {
 }
 
 function scrollIntoView() {
-  let element = document.getElementById("galery");
+  let element = document.getElementById("about");
   element.scrollIntoView();
 }
 
