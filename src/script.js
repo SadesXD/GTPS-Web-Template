@@ -21,16 +21,12 @@ function darkModeLoad() {
     (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
+    document.getElementById("dark").classList.toggle("fa-sun");
     document.body.classList.add("dark");
     document.body.classList.add("bg-darkMode");
   } else {
     document.body.classList.remove("dark");
     document.body.classList.remove("bg-darkMode");
-  }
-
-  if (localStorage.theme === "dark") {
-    document.getElementById("dark").classList.toggle("fa-sun");
-    document.body.classList.add("bg-darkMode");
   }
 }
 
