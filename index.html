@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>GTPS Website</title>
   </head>
-  <body class="overflow-x-hidden bg-whiteCustom">
+  <body class="bg-whiteCustom md:overflow-x-hidden">
     <!-- header -->
     <section>
-      <header class="flex justify-between items-center mx-10 my-7">
+      <header class="flex justify-between items-center mx-5 my-7">
         <a class="server_name font-bold tracking-wide text-xl dark:text-gray-200 uppercase" href="#"></a>
         <ul id="navbar" class="navbar hidden md:flex dark:bg-darkCard dark:md:bg-transparent">
           <li class="NavbarLi"><a onclick="mobileClick()" class="NavbarHrefStyle" href="#">Home</a></li>
@@ -31,15 +31,15 @@
     <section id="home" class="relative mx-5">
       <div class="mt-[7em] space-y-5 md:flex md:justify-between md:items-center md:flex-row-reverse md:mx-5">
         <div class="md:space-y-5">
-          <img src="" alt="img" class="server_images w-[90%] mx-auto rounded-md md:mx-0 lg:w-[70%]">
-          <img src="" alt="img" class="server_images hidden rounded-md w-[90%] md:block md:ml-[18%] lg:w-[70%]">
+          <img src="" alt="img" class="server_images z-10 w-[90%] mx-auto rounded-md md:mx-0 lg:w-[70%]">
+          <img src="" alt="img" class="server_images z-10 hidden rounded-md w-[90%] md:block md:ml-[18%] lg:w-[70%]">
         </div>
         <div class="space-y-2">
           <h1 class="server_name capitalize text-xl font-bold tracking-wide dark:text-gray-200"></h1>
           <p id="server_description" class="indent-5 md:w-[95%] lg:w-[80%] text-justify md:text-left dark:text-gray-200"></p>
         </div>
       </div>
-      <div class="circle-blur top-[50%] -right-[20%] bg-purpleBlur md:top-20"></div>
+      <div class="circle-blur top-[50%] right-0 bg-purpleBlur/50 md:top-20"></div>
       <i class="fas fa-angle-double-down text-gray-700 mx-[50%] dark:text-gray-200 mt-[10%] text-[2em] animate-bounce cursor-pointer" onclick="scrollIntoView()" ></i>
     </section>
 
@@ -87,7 +87,7 @@
       <div id="modal" class="relative m-5 shadow-base rounded-md p-5 dark:bg-darkCard dark:shadow-baseDark md:mx-[20%]"> 
         <div class="modalX" onclick="modalX()">&times;</div>
         <h2 class="text-center mb-5 font-bold text-xl dark:text-gray-200">Choose your device</h2>
-        <div class="mx-[20%] space-y-3">
+        <div class="mx-[15%] md:mx-[20%] space-y-3">
           <p class="deviceCard" onclick="tutorClick('android')">
             <i class="fab fa-android text-2xl mx-2 text-lime-500"></i>
             Android
@@ -148,7 +148,7 @@
           </div>
         </div>
         <div class="circle-blur bg-pinkBlur/20 top-[3em] -left-[5em]"></div>
-        <div class="circle-blur bg-orangeBlur/20 -bottom-[2em] -right-[2em] md:-right-[1em] md:bg-orangeBlur/30"></div>
+        <div class="circle-blur bg-orangeBlur/20 -bottom-[2em] right-0 md:-right-[1em] md:bg-orangeBlur/30"></div>
       </section>
 
       <!-- Galery -->
