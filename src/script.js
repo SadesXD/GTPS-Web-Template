@@ -28,7 +28,7 @@ function darkModeLoad() {
 
   if (localStorage.theme === "dark") {
     document.getElementById("dark").classList.toggle("fa-sun");
-    document.body.classList.toggle("bg-darkMode");
+    document.body.classList.add("bg-darkMode");
   }
 }
 
