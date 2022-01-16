@@ -19,7 +19,7 @@ function tutorial(ip) {
       "Open notepad as administrator",
       "Click on File and select Open",
       'Go to path <span class="text-blue-500">C:\\Windows\\System32\\drivers\\etc</span> and open Hosts file',
-      `Add the server ip in thats file, Like this:<br>${ip} Growtopia1.com<br>${ip} Growtopia2.com`,
+      `Add the server ip in thats file, Like this:<br>${ip} growtopia1.com<br>${ip} growtopia2.com`,
       "Click File and select Save",
       "Now log in to Growtopia",
     ],
