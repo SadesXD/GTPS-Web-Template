@@ -95,5 +95,5 @@ function loadConfig() {
   });
 }
 
-//darkModeLoad();
+darkModeLoad();
 loadConfig();
